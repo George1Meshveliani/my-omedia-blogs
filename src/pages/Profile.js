@@ -1,13 +1,13 @@
 import { useParams } from 'react-router';
 
 
-const User = () => {
+const Profile = () => {
     const { id } = useParams();
-    return (
+    return (        
         <div>
-            <h1>User {id}</h1>  
+            <h1>Profile {id}</h1>
         </div>
     )
 }
 
-export default User;
+export default Profile;
