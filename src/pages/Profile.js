@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 
 const Profile = () => {
     const { id } = useParams();
-    return (        
+    return (
         <div>
             <h1>Profile {id}</h1>
         </div>
