@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-import User from './pages/User';
+import User from './pages/Post';
 import Profile from './pages/Profile';
 
 import './App.css';
@@ -19,14 +19,14 @@ function App() {
                 <Link to='/profile'>Profile</Link>
             </li>
             <li>
-                <Link to='/user'>Users</Link>
+                <Link to='/post'>User post</Link>
             </li>
           </ul>
         </header>
         <Switch>
             <Route exact path='/' />
             <Route exact path='/profile/:id' component={Profile} />
-            <Route   path='/user/:id' component={User}/> 
+            <Route   path='/post/:id' component={User}/> 
           </Switch>
 
      </div>
