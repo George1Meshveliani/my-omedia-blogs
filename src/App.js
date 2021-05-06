@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-import User from './pages/Post';
+import Post from './pages/Post';
 import Profile from './pages/Profile';
+import Blogs from './pages/Blogs';
 
 import './App.css';
 
@@ -24,9 +25,9 @@ function App() {
           </ul>
         </header>
         <Switch>
-            <Route exact path='/' />
+            <Route exact path='/' component={Blogs} />
             <Route exact path='/profile/:id' component={Profile} />
-            <Route   path='/post/:id' component={User}/> 
+            <Route   path='/post/:id' component={Post}/> 
           </Switch>
 
      </div>
