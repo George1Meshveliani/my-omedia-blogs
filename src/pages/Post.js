@@ -6,6 +6,8 @@ import api from '../functions/api';
 
 const Post = () => {
   
+    const { id } = useParams();
+
     const postsApi = api('/posts');
     const userApi  = api('/users');
     const commentsApi = api('/comments');
@@ -14,14 +16,11 @@ const Post = () => {
     const [ userData, setUserData ] = useState([]);
     const [ commentsData, setCommentsData ] = useState([]);
 
-    const { id } = useParams();
-
     useEffect(() => {
         fetchUrl(postsApi, data, setData);
         fetchUrl(userApi, userData, setUserData);
         fetchUrl(commentsApi, commentsData, setCommentsData);
       },[]);
-  
 
 
      const userPostTitle = data.map(i => {

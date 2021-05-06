@@ -13,7 +13,7 @@ function App() {
         <header>
           <ul>
             <li>
-                <Link to='/'>Home</Link>
+                <Link to='/'>Posts</Link>
             </li>
             <li>
                 <Link to='/profile'>Profile</Link>

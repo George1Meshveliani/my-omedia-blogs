@@ -31,11 +31,11 @@ body {
 ul {
   display: flex;
   flex-direction: row;
-  padding: 5px;
+  padding: 10px;
 }
 
 li {
-  padding: 5px;
+  padding: 15px;
 }
 .App-link {
   color: #61dafb;
