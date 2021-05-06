@@ -1,5 +1,6 @@
 import { useParams } from 'react-router';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import fetchUrl from '../functions/fetchUrl';
 import api from '../functions/api';
@@ -22,10 +23,9 @@ const Post = () => {
         fetchUrl(commentsApi, commentsData, setCommentsData);
       },[]);
 
-
      const userPostTitle = data.map(i => {
          if(i.id === +id) {
-             return `${i.userId} - ${i.title} -`;
+             return `${i.title}`;
          }
      });
 
@@ -48,8 +48,14 @@ const Post = () => {
     })
     return (
             <div>
-              <h1>{userPostTitle}</h1>
-              <h2>{username}</h2>
+              <h1>Title: {userPostTitle}</h1>
+              <Link to={`/profile/${id}`} >
+                <section>
+                <button>
+                    Username: {username}
+                  </button> 
+                </section>
+              </Link>
               <img src="https://picsum.photos/200/300"/>
               <h1>content</h1>
               <section>

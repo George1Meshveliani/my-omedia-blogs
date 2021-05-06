@@ -16,12 +16,8 @@ function App() {
             <li>
                 <Link to='/'>Posts</Link>
             </li>
-            <li>
-                <Link to='/profile'>Profile</Link>
-            </li>
-            <li>
-                <Link to='/post'>User post</Link>
-            </li>
+                <Link to='/profile'> </Link>
+                <Link to='/post'> </Link>
           </ul>
         </header>
         <Switch>

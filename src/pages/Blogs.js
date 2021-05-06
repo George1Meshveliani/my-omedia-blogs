@@ -4,12 +4,11 @@ import {  Link } from "react-router-dom";
 import fetchUrl from '../functions/fetchUrl';
 import api from '../functions/api';
 
+
 import { Button } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
-import CardDeck from 'react-bootstrap/CardDeck';
 import CardGroup from 'react-bootstrap/CardGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Image from 'react-bootstrap/Image';
 
 
 

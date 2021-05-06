@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import fetchUrl from '../functions/fetchUrl';
 import api from '../functions/api';
 
+import Blogs from './Blogs';
+
 
 const Profile = () => {
     const { id } = useParams();
@@ -24,6 +26,9 @@ const Profile = () => {
     return (
         <div>
             <h1>User Profile: {userInfoList}</h1>
+            <br>
+            </br>
+            <Blogs />
         </div>
     )
 }
