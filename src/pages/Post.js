@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import fetchUrl from '../functions/fetchUrl';
 import api from '../functions/api';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Alert from 'react-bootstrap/Alert'
+
 
 const Post = () => {
 
@@ -57,15 +60,16 @@ const Post = () => {
                   </button> 
                 </section>
               </Link>
-              <section className="content">
+              <Alert variant='danger'>
               <img src="https://picsum.photos/200/300"/>
               <h1>content</h1>
                 {content}
-              </section>
-              <section className="comments">
-              <h1>comments</h1>
+              </Alert>
+
+                <Alert variant='info'>
+                <h1>comments</h1>
                 {comments}
-              </section>
+                </Alert>
             </div>
         )
 }
