@@ -25,7 +25,7 @@ const Profile = () => {
     })
     return (
         <div>
-            <h1>User Profile: {userInfoList}</h1>
+            <h1 className="User-Profile">User Profile: {userInfoList}</h1>
             <br>
             </br>
             <Blogs />

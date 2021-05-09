@@ -11,8 +11,6 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
-
 const Blogs = () =>  {
     const [ blogsData, setBlogsData ] = useState([]);
     const [ stack, setStack ] = useState(12);
@@ -56,5 +54,5 @@ const Blogs = () =>  {
     </div>
     )
 }
-  export default Blogs;
-  
+
+export default Blogs;

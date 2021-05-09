@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 import fetchUrl from '../functions/fetchUrl';
 import api from '../functions/api';
 
+
 const Post = () => {
-  
+
     const { id } = useParams();
 
     const postsApi = api('/posts');
@@ -48,21 +49,21 @@ const Post = () => {
     })
     return (
             <div>
-              <h1>Title: {userPostTitle}</h1>
+              <h1 className="title">Title: {userPostTitle}</h1>
               <Link to={`/profile/${id}`} >
-                <section>
+                <section className="username">
                 <button>
                     Username: {username}
                   </button> 
                 </section>
               </Link>
+              <section className="content">
               <img src="https://picsum.photos/200/300"/>
               <h1>content</h1>
-              <section>
                 {content}
               </section>
+              <section className="comments">
               <h1>comments</h1>
-              <section>
                 {comments}
               </section>
             </div>

@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(206, 252, 206);
+  background-color: rgb(115, 253, 103);
 }
 
 .App {
@@ -41,6 +41,28 @@ li {
   color: #61dafb;
 }
 
+.comments {
+  background-color: rgb(21, 21, 248, 0.6);
+  width: 100%;
+  border-style: inset;
+  margin-top: 5px;
+}
+
+.User-Profile {
+  background-color: red;
+  width: 100%;
+  border-style: outset;
+}
+
+.title {
+  background-color: rgba(255, 255, 111, 0.5);
+  border-style: outset;
+}
+
+.content {
+  background-color: rgba(25, 143, 151, 0.6);
+  border-style: solid;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
