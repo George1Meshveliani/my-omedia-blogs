@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import {  Link } from "react-router-dom";
 
-import fetchUrl from '../functions/fetchUrl';
+// import fetchUrl from '../functions/fetchUrl';
 import api from '../functions/api';
+import useFetch from '../functions/useFetch';
 
 
 import { Button } from 'react-bootstrap';
@@ -12,23 +13,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Blogs = () =>  {
-    const [ blogsData, setBlogsData ] = useState([]);
-    const [ stack, setStack ] = useState(12);
-
     const blogsApi = api('/posts');
-  
+    const [ response, loading, error ] = useFetch(blogsApi);
+
+    const [ stack, setStack ] = useState(12);
+    
     const loadMore = () => {
       setStack(initialNumberOfStack => initialNumberOfStack + 12);
     }
-    useEffect(() => {
-        fetchUrl(blogsApi, blogsData, setBlogsData);
-    },[]);
 
     return (
     <div>
           <div>
-             <CardGroup>
-               {blogsData.slice(0, stack).map(info => (
+            { loading ? (
+              <p>
+                Please wait...
+              </p>
+            ) : (
+              <div>
+                  <CardGroup>
+               {response.slice(0, stack).map(info => (
                <div key={info.userId}> 
                <Card style={{ 
                   width: '16rem',  
@@ -51,11 +55,14 @@ const Blogs = () =>  {
                 ))}
             </CardGroup>
                 <br></br>
-                {stack >= blogsData.length ? null : (
+                {stack >= response.length ? null : (
                   <Button variant="primary" size="lg" active block onClick={loadMore}>
                         Load more...
                   </Button>
-                )}
+                )} 
+                {error && <p>Something is wrong with API, please try again later</p>}
+              </div>
+            )}
           </div>
     </div>
     )

@@ -60,7 +60,7 @@ const Post = () => {
                   </button> 
                 </section>
               </Link>
-              <Alert variant='danger'>
+              <Alert variant='light'>
               <img src="https://picsum.photos/200/300"/>
               <h1>content</h1>
                 {content}
