@@ -17,7 +17,6 @@ const Blogs = () =>  {
     const [ response, loading, error ] = useFetch(blogsApi);
 
     const [ stack, setStack ] = useState(12);
-    
     const loadMore = () => {
       setStack(initialNumberOfStack => initialNumberOfStack + 12);
     }

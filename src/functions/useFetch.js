@@ -1,29 +1,56 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useReducer } from 'react';
+
+ const initialState = {
+    resutl: null,
+    loading: true,
+    error: null
+  };
+
+  const fetchReducer = (state, action) => {
+    if ( action.type === "LOADING") {
+      return {
+        resutl: null,
+        loading: true,
+        error: null
+      }
+    }
+    if(action.type === "COMPLETE") {
+      return {
+        result: action.payload.response,
+        loading: false,
+        error: null
+      }
+    }
+    if(action.type === "ERROR") {
+      return {
+        result: null,
+        loading: false,
+        error: action.payload.error
+      }
+    }
+
+    return state;
+   }
 
 const useFetch = url => {
+  const [ state, dispatch ] = useReducer(fetchReducer, initialState);
+  
+  useEffect(() => {
+    dispatch({ type: "LOADING"});
 
-    const [ response, setResponse ] = useState(null);
-    const [ loading, setLoading ] = useState(true);
-    const [ error, setError ] = useState(null);
-
-    useEffect(() => {
-        setLoading(true);
-        setResponse([]);
-        setError(null);
-
-        fetch(url)
-        .then(response => response.json())
-        .then(response => {
-            setLoading(false);
-            setResponse(response);
-        })
-        .catch(error => {
-            setLoading(false);
-            setError(error);
-          });
-    },[])
-
-  return [response, loading, error];
+    const getUrl = async () => {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        dispatch({ type: 'COMPLETE', payload: { response: data }})
+      } catch (error) {
+        dispatch({ type: 'ERROR', payload: { error }});
+      }
+    }
+    getUrl();
+  },[url])
+  
+  return [state.result, state.loading, state.error];
 }
 
 export default useFetch;
