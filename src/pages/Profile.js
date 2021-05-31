@@ -1,7 +1,4 @@
 import { useParams } from 'react-router';
-// import { useState, useEffect } from 'react';
-
-// import fetchUrl from '../functions/fetchUrl';
 import api from '../functions/api';
 
 import Blogs from './Blogs';
