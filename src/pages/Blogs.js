@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {  Link } from "react-router-dom";
 
 // import fetchUrl from '../functions/fetchUrl';
@@ -58,7 +58,7 @@ const Blogs = () =>  {
                   <Button variant="primary" size="lg" active block onClick={loadMore}>
                         Load more...
                   </Button>
-                )} 
+                )}
                 {error && <p>Something is wrong with API, please try again later</p>}
               </div>
             )}

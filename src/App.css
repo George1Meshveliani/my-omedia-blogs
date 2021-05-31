@@ -53,6 +53,8 @@ li {
   background-color: red;
   width: 100%;
   border-style: outset;
+  text-align: left;
+  max-width: 500px;
 }
 
 .title {
