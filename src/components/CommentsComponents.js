@@ -10,9 +10,7 @@ import Alert from 'react-bootstrap/Alert';
 const CommentsComponents = () => {
     const {id} = useParams();
     const {commentsInfo, commentsLoading, commentsError} = useContext(Context);
-
-
-
+    
     return (
         <div>
             { commentsLoading ? (

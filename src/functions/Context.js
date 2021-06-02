@@ -8,6 +8,7 @@ export const Context = createContext([
 ])
 
 const ContextProvider = ({children}) => {
+    
     const userApi = api('/users');
     const blogsApi = api('/posts');
     const commentsApi = api('/comments');

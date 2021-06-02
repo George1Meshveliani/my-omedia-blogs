@@ -5,7 +5,6 @@ import { Context } from "../functions/Context";
 import { Link } from 'react-router-dom';
 
 
-
 const UserComponents = () => {
     const {id} = useParams();
     const {userInfo, userLoading, userError} = useContext(Context);
