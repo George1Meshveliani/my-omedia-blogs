@@ -45,7 +45,7 @@ const PostComponents = () => {
                                 null
                             )}
                         </div>
-                    ))}
+                    ))} 
 
                     {/* <h1 className="title">Title: {userPostTitle}</h1>
                     <Alert variant='light'>
@@ -55,6 +55,7 @@ const PostComponents = () => {
                         </Alert>  */}
                 </div>
             )}
+             {blogsError && <p> Something wrong with API please try again later ... </p>}
         </div>
     )
 }
