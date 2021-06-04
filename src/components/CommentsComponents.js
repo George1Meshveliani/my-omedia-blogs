@@ -25,19 +25,20 @@ const CommentsComponents = () => {
                             { i.postId === +id ? (
                                 <div>
                                      <Alert variant='info'>
+                                         <div className="comment">
                                          <h3>commented by: {i.email}</h3>
                                          <strong> {i.body} </strong>
+                                         <hr />
+                                         </div>
                                     </Alert> 
                                 </div>
                             ) : (
                                 null
                             )}
                         </div>
-                        
                     ))}
                         <button className="Add-Comment-Button"> Add comment </button>
                 </div>
-                
             )}
              {commentsError && <p> Something wrong with API please try again later ... </p>}
         </div>

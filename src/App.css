@@ -49,6 +49,10 @@ li {
   margin-top: 5px;
 }
 
+.comment {
+  text-align: left;
+}
+
 .User-Profile {
   background-color: red;
   width: 100%;
@@ -71,9 +75,16 @@ li {
 }
 .title {
   background-color: rgba(255, 255, 111, 0.5);
-  border-style: outset;
+  border-gitstyle: outset;
 }
 
+.username {
+  width: 300px;
+  background-color: rgb(117, 255, 4);
+  padding: 10px;
+  margin: 10px;
+  border-style: outset;
+}
 .content {
   background-color: rgba(25, 143, 151, 0.6);
   border-style: solid;

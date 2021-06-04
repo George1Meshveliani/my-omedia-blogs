@@ -25,9 +25,7 @@ const UserComponents = () => {
                                 <div>
                                     <Link to={`/profile/${id}`} >
                                         <section className="username">
-                                        <button>
                                             Username: {i.username}
-                                        </button>
                                         </section>
                                     </Link>                                </div>
                             ) : (
