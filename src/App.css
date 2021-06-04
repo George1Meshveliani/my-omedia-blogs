@@ -57,6 +57,11 @@ li {
   max-width: 500px;
 }
 
+.Add-Comment-Button {
+  /* position: absolute;
+  right:    0;
+  bottom:   0; */
+}
 .title {
   background-color: rgba(255, 255, 111, 0.5);
   border-style: outset;

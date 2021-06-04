@@ -4,6 +4,7 @@ import { Context } from "../functions/Context";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Alert from 'react-bootstrap/Alert';
+import '../App.css';
 
 
 
@@ -32,8 +33,11 @@ const CommentsComponents = () => {
                                 null
                             )}
                         </div>
+                        
                     ))}
+                        <button className="Add-Comment-Button"> Add comment </button>
                 </div>
+                
             )}
              {commentsError && <p> Something wrong with API please try again later ... </p>}
         </div>
