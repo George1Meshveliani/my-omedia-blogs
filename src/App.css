@@ -58,6 +58,13 @@ li {
 }
 
 .Add-Comment-Button {
+  background-color: #61dafb;
+  color: white;
+  border-radius: 6px;
+  border-style: outset;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 8px 2px  #888888;
   /* position: absolute;
   right:    0;
   bottom:   0; */
@@ -79,3 +86,6 @@ li {
     transform: rotate(360deg);
   }
 }
+
+
+
