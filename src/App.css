@@ -53,6 +53,11 @@ li {
   text-align: left;
 }
 
+.comment:hover {
+  transform: scale(0.9);
+  color: black;
+}
+
 .User-Profile {
   background-color: red;
   width: 100%;
@@ -72,6 +77,10 @@ li {
   /* position: absolute;
   right:    0;
   bottom:   0; */
+}
+
+.Add-Comment-Button:hover {
+  transform: scale(1.2);
 }
 .title {
   background-color: rgba(255, 255, 111, 0.5);
