@@ -2,4 +2,4 @@
 
 # Visit website: 
 
-myomediablogs.netlify.app
+https://myomediablogs.netlify.app/
