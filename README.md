@@ -2,4 +2,4 @@
 
 # Visit website: 
 
-https://myomediablogs.netlify.app/
+https://apiblogs.netlify.app/
